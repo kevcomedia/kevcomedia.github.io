@@ -1,0 +1,60 @@
+/* BASE STYLES */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #fbfbfb;
+  color: #050517;
+  font: 1.6rem/1.4 'Inter', 'Roboto', sans-serif;
+  margin: 0;
+}
+
+
+/* COMMON STYLES */
+
+a {
+  text-decoration: none;
+}
+
+
+/* MODULES */
+
+.primary-nav {
+  background: #cf5c36;
+  color: #f4e3b2;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* 1. Remove default list styles. */
+
+.primary-nav__links {
+  display: flex;
+  list-style: none; /* 1 */
+  margin: 0; /* 1 */
+  padding: 0; /* 1 */
+}
+
+.primary-nav__link {
+  color: inherit;
+  display: inline-block;
+  padding: 1em;
+  transition: all ease 0.3s;
+  transition-property: background, color;
+}
+
+.primary-nav__link:hover {
+  background: #f4e3b2;
+  color: #cf5c36;
+}
