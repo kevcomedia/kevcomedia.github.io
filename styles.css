@@ -27,6 +27,8 @@ a {
 
 /* MODULES */
 
+/** Primary Nav */
+
 .primary-nav {
   background: #cf5c36;
   color: #f4e3b2;
@@ -57,4 +59,48 @@ a {
 .primary-nav__link:hover {
   background: #f4e3b2;
   color: #cf5c36;
+}
+
+
+/** Masthead */
+
+.masthead {
+  align-items: center;
+  background: #cf5c36;
+  background:
+    linear-gradient(176deg, transparent 80%, #fbfbfb calc(80% + 1px)),
+    linear-gradient(
+      70deg,
+      transparent 60%,
+      rgba(0, 0, 0, 0.1) calc(60% + 1px)
+    ),
+    linear-gradient(
+      15deg,
+      transparent 60%,
+      rgba(0, 0, 0, 0.05) calc(60% + 1px)
+    ),
+    linear-gradient(86deg, #bd5432, #d36a48);
+  color: #fefcf8;
+  display: flex;
+  height: 100vh;
+}
+
+.masthead__inner {
+  font-size: 2rem;
+  margin: auto;
+  max-width: 55rem;
+  padding: 1em;
+  width: 100%;
+}
+
+.masthead__title,
+.masthead__subtitle {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.masthead__title {
+  font-size: 2.8em;
+  font-weight: 300;
+  line-height: 1;
 }
