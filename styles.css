@@ -315,3 +315,17 @@ a:hover {
 .contact__link:hover {
   color: inherit; /* 1 */
 }
+
+
+/**
+ * Page footer
+ *
+ * 1. Prevent <p>'s margin bleeding out of footer.
+ */
+
+.page-footer {
+  background: #391a0f;
+  color: #faf0ec;
+  display: flex; /* 1 */
+  justify-content: center;
+}
