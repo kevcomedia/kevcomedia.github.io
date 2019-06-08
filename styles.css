@@ -239,11 +239,25 @@ a:hover {
 }
 
 
+/** Fancy Background */
+
+.fancy-background {
+  background: #cf5c36;
+  background:
+    linear-gradient(
+      50deg,
+      transparent 40%,
+      rgba(0, 0, 0, 0.1)
+      calc(35% + 1px),
+      transparent
+    ),
+    linear-gradient(#d36a48, #bd5432);
+}
+
+
 /** Contact */
 
 .contact {
-  background: #cf5c36;
-  background: linear-gradient(#d36a48, #bd5432);
   color: #fefcf8;
   font-size: 1.4rem;
 }
@@ -301,7 +315,7 @@ a:hover {
  */
 
 .page-footer {
-  background: #391a0f;
+  background: rgba(0, 0, 0, 0.5);
   color: #faf0ec;
   display: flex; /* 1 */
   justify-content: center;
