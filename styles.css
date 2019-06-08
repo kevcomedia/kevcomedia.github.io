@@ -68,6 +68,36 @@ a:hover {
 }
 
 
+/** Sections */
+
+.section {
+  padding: 8rem 0;
+}
+
+.section__inner {
+  margin: auto;
+  max-width: 110rem;
+}
+
+.section__title,
+.section__subtitle,
+.section__description {
+  text-align: center;
+}
+
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+
 /** Masthead */
 
 .masthead {
@@ -109,4 +139,75 @@ a:hover {
   font-size: 2.8em;
   font-weight: 300;
   line-height: 1;
+}
+
+
+/** Portfolio */
+
+.portfolio {
+  padding: 2rem 0;
+}
+
+.portfolio__header {
+  margin-bottom: 4rem;
+}
+.portfolio__header::after {
+  background: #cf5c36;
+  content: '';
+  display: block;
+  height: 0.2rem;
+  margin: auto;
+  width: 20rem;
+}
+
+
+/**
+ * Gallery
+ *
+ * 1. Remove default list styles.
+ */
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none; /* 1 */
+  margin: 0; /* 1 */
+  padding: 0 1.5rem; /* 1 */
+}
+
+.gallery__item {
+  background: #fff;
+  border: 0.1rem solid #d3d5d7;
+  border-radius: 0.4rem;
+  flex: 1 1 30rem;
+  max-width: 30rem;
+  text-align: center;
+  transition: box-shadow ease 0.2s;
+}
+
+.gallery__item:hover {
+  box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
+}
+
+@supports (display: grid) {
+  .gallery {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+
+  .gallery__item {
+    max-width: unset;
+  }
+}
+
+.gallery__item-title {
+  margin: 0;
+  padding: 1em 0;
+}
+
+.gallery__thumbnail {
+  display: block;
+  width: 100%;
 }
