@@ -1,0 +1,33 @@
+{
+  "name": "kevcomedia.github.io",
+  "version": "1.0.0",
+  "description": "My GitHub Pages repo",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "rm -rf build/",
+    "build": "npm run build:css && npm run build:images && cp src/*.html build/",
+    "build:css": "postcss --use autoprefixer cssnano -m -o build/styles.css src/styles.css",
+    "build:images": "imagemin src/images/* --out-dir=build/images",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevcomedia/kevcomedia.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevcomedia/kevcomedia.github.io/issues"
+  },
+  "homepage": "https://github.com/kevcomedia/kevcomedia.github.io#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.6.0",
+    "cssnano": "^4.1.10",
+    "gh-pages": "^2.0.1",
+    "imagemin-cli": "^4.0.1",
+    "postcss-cli": "^6.1.2"
+  }
+}
