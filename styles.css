@@ -21,7 +21,13 @@ body {
 /* COMMON STYLES */
 
 a {
+  color: #286084;
   text-decoration: none;
+  transition: color ease 0.3s;
+}
+
+a:hover {
+  color: #7495ab;
 }
 
 
