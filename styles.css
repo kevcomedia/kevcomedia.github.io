@@ -108,13 +108,18 @@ a:hover {
 }
 
 
-/** Masthead */
+/**
+ * Masthead
+ *
+ * 1. Limit max height, because on really large displays the whole masthead
+ * looks awkward.
+ */
 
 .masthead {
   align-items: center;
   background: #cf5c36;
   background:
-    linear-gradient(176deg, transparent 80%, #fbfbfb calc(80% + 1px)),
+    linear-gradient(178deg, transparent 92.5%, #fbfbfb calc(92.5% + 1px)),
     linear-gradient(
       70deg,
       transparent 60%,
@@ -129,6 +134,7 @@ a:hover {
   color: #fefcf8;
   display: flex;
   height: 100vh;
+  max-height: 108rem;
 }
 
 .masthead__inner {
@@ -137,6 +143,12 @@ a:hover {
   max-width: 55rem;
   padding: 1em;
   width: 100%;
+}
+
+@media screen and (min-width: 1440px) {
+  .masthead__inner {
+    font-size: 2.8rem;
+  }
 }
 
 .masthead__title,
