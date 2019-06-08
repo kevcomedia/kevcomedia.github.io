@@ -88,12 +88,14 @@ a:hover {
     linear-gradient(
       70deg,
       transparent 60%,
-      rgba(0, 0, 0, 0.1) calc(60% + 1px)
+      rgba(0, 0, 0, 0.1) calc(60% + 1px),
+      transparent
     ),
     linear-gradient(
       15deg,
       transparent 60%,
-      rgba(0, 0, 0, 0.05) calc(60% + 1px)
+      rgba(0, 0, 0, 0.05) calc(60% + 1px),
+      transparent
     ),
     linear-gradient(86deg, #bd5432, #d36a48);
   color: #fefcf8;
