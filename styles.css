@@ -17,6 +17,16 @@ body {
   margin: 0;
 }
 
+/**
+ * Variable font for smaller font file size.
+ */
+
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: 'Inter var', 'Roboto', sans-serif;
+  }
+}
+
 
 /* COMMON STYLES */
 
@@ -249,4 +259,59 @@ a:hover {
 
 .about__prose {
   text-align: justify;
+}
+
+
+/** Contact */
+
+.contact {
+  background: #cf5c36;
+  background: linear-gradient(#d36a48, #bd5432);
+  color: #fefcf8;
+  font-size: 1.4rem;
+}
+
+/**
+ * 1. Offset every top/bottommost contact items' vertical margin.
+ * 2. Remove default list styles.
+ */
+
+.contact__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  justify-content: space-evenly;
+  list-style: none; /* 2 */
+  margin: -2rem 0; /* 1, 2 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * 1. Vertical spacing between each item when stacked.
+ */
+
+.contact__item {
+  flex-basis: 22rem;
+  margin: 2rem 0; /* 1 */
+}
+
+/**
+ * 1. Position icon on top of link text.
+ * 2. Increased font weight for better legibility against red background.
+ */
+
+.contact__link {
+  align-items: center; /* 1 */
+  color: inherit;
+  display: flex; /* 1 */
+  flex-direction: column; /* 1 */
+  font-weight: 500; /* 2 */
+}
+
+/**
+ * 1. Override default link hover colors.
+ */
+
+.contact__link:hover {
+  color: inherit; /* 1 */
 }
